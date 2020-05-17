@@ -8,17 +8,13 @@ function fiboEvenSum(n) {
   let previous = 0, current = 1, result = 0;
   for(let i = 0;i<n ;i++){
     const next = previous + current;
-    // if(next>4000000){
-    //   break;
-    // }
     if(next % 2 ===0){
     result += next;
     }
-    
+    if(next>n)break;
     previous = current;
     current = next;
   }
   return result;
 }
-
-fiboEvenSum(10);
+console.log(fiboEvenSum(10));
