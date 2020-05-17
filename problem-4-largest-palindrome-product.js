@@ -1,10 +1,11 @@
+//A palindromic number reads the same both ways. The largest palindrome 
+//made from the product of two 2-digit numbers is 9009 = 91 × 99.
+//Find the largest palindrome made from the product of two n-digit numbers.
 function largestPalindromeProduct(n) {
   // Good luck!
   let product = 0, largestPalindromeProduct = 0;
 const lowerBound = Number(`1${Array.from({length:n}).join(0)}`);
   const upperBound= Number(`${Array.from({length: n+1}).join(9)}`);
-console.log(lowerBound)
-console.log(upperBound)
 for(let i = lowerBound; i<=upperBound; i++)
     for(let j = lowerBound; j<=upperBound; j++){
       product = i * j;
@@ -12,7 +13,6 @@ for(let i = lowerBound; i<=upperBound; i++)
       largestPalindromeProduct = product
     }
 
-console.log(largestPalindromeProduct)
   return largestPalindromeProduct;
 }
 
@@ -23,4 +23,4 @@ function isPalindrom(n){
   === Array.from(numbertoString).toString());
 }
 
-largestPalindromeProduct(3);
+console.log(largestPalindromeProduct(3));
