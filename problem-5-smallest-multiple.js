@@ -22,4 +22,4 @@ function smallestMult(n) {
   return counter;
 }
 
-console.log(smallestMult(5));
+console.log(smallestMult(2));
