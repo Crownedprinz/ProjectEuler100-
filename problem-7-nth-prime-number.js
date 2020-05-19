@@ -3,6 +3,10 @@
 //What is the nth prime number?
 
 //The Idea is to test all odd numbers (even numbers are NOT prime, so…why test them?).
+//Generate on-the-go an array with each prime number detected, so, while testing forward (from 3 to sqrt(n), 
+//against that array, you will dramatically reduce the amount of tests. 
+//variable j could come from that array. 
+//The array will grow every time you find a new prime.
 function nthPrime(n) {
     let primes = [2];
     let higherDivisorLimit;
